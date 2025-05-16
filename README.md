@@ -78,45 +78,8 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
-4. ├── .vscode/
-│   ├── settings.json           # VS Code workspace settings
-│   ├── launch.json             # Debugging configurations (optional)
-│   ├── extensions.json         # Recommended extensions (optional)
-│
-├── .github/
-│   ├── workflows/
-│   │   ├── ci.yml              # Basic CI workflow: Python version check & dependency installation
-│   │   ├── unittests.yml       # Workflow to run tests automatically
-│   ├── ISSUE_TEMPLATE.md       # Issue reporting template (optional)
-│   ├── PULL_REQUEST_TEMPLATE.md # Pull request guidelines (optional)
-│
-├── .gitignore                  # Ignores unnecessary files (data/, .csv, .ipynb_checkpoints/)
-│
-├── requirements.txt            # Lists required Python dependencies
-│
-├── README.md                   # Documentation: project overview, installation, usage
-│
-├── src/                         # Main source code for the project
-│   ├── __init__.py
-│   ├── main.py                 # Entry point (optional, rename as needed)
-│   ├── utils/                   # Utility scripts
-│   │   ├── helpers.py
-│
-├── notebooks/                   # Jupyter notebooks for experimentation & documentation
-│   ├── __init__.py
-│   ├── exploratory_data_analysis.ipynb  # Example notebook
-│   ├── README.md
-│
-├── tests/                        # Unit tests
-│   ├── __init__.py
-│   ├── test_main.py              # Tests for the main application
-│
-└── scripts/                      # Standalone scripts for data processing, automation
-    ├── __init__.py
-    ├── preprocess.py             # Example script for data preprocessing
-    ├── README.md
 
-5. Key Performance Indicators (KPIs)
+4. Key Performance Indicators (KPIs)
 Development Environment Setup: Ensures smooth installation and execution of dependencies.
 
 Version Control & CI/CD: Maintains structured commits and automated testing with GitHub Actions.
