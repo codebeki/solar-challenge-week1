@@ -3,12 +3,15 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Load cleaned datasets
+# Use GitHub URLs instead of local file paths
+BASE_URL = "https://raw.githubusercontent.com/codebeki/solar-challenge-week1/main/data/"
+
+# Load datasets from GitHub instead of local paths
 @st.cache_data
 def load_data():
-    benin = pd.read_csv("data/benin_clean.csv")
-    sierra_leone = pd.read_csv("data/sierraleone_clean.csv")
-    togo = pd.read_csv("data/togo_clean.csv")
+    benin = pd.read_csv(BASE_URL + "benin_clean.csv")
+    sierra_leone = pd.read_csv(BASE_URL + "sierraleone_clean.csv")
+    togo = pd.read_csv(BASE_URL + "togo_clean.csv")
     return {"Benin": benin, "Sierra Leone": sierra_leone, "Togo": togo}
 
 data = load_data()
@@ -16,7 +19,7 @@ data = load_data()
 # App Title
 st.title("Solar Energy Analysis Dashboard 🌞")
 
-# Country Selection
+# Country Selection Dropdown
 selected_country = st.selectbox("Select a country", options=list(data.keys()))
 df = data[selected_country]
 st.write(f"Showing data for: {selected_country}")
