@@ -1,1 +1,4 @@
-streamlit\npandas\nmatplotlib\nseaborn
+streamlit
+pandas
+matplotlib
+seaborn
